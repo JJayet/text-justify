@@ -2,7 +2,7 @@ import { Effect, pipe } from 'effect'
 import * as jose from 'jose'
 
 import { GetTokenError, type Token } from '../schema'
-import { createUser } from 'src/repository/user'
+import { createUser } from '../repository/user'
 
 const getJwt = (email: string) =>
   pipe(

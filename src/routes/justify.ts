@@ -1,7 +1,7 @@
 import { Effect, pipe } from 'effect'
 import * as S from '@effect/schema/Schema'
 
-import { getWordsCount, updateWordsCount } from 'src/repository/user'
+import { getWordsCount, updateWordsCount } from '../repository/user'
 import { countWords, getJustifiedTextString } from '../logic/justifyText'
 
 const wordsLimitPerDay = Number(process.env.DAILY_WORD_LIMIT ?? '80000')

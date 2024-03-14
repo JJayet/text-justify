@@ -1,7 +1,7 @@
 import { Effect, pipe } from 'effect'
 import * as jose from 'jose'
 
-import { getUserFromEmail } from 'src/repository/user'
+import { getUserFromEmail } from '../repository/user'
 
 export const validateToken = (token: string) =>
   pipe(
