@@ -1,5 +1,5 @@
 {
-  "name": "killbills",
+  "name": "text-justifier",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "src",
   "projectType": "application",
@@ -10,7 +10,7 @@
       "defaultConfiguration": "production",
       "options": {
         "platform": "node",
-        "outputPath": "dist/killbills",
+        "outputPath": "dist/text-justifier",
         "format": ["cjs"],
         "bundle": false,
         "main": "src/main.ts",
@@ -41,20 +41,20 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "killbills:build"
+        "buildTarget": "text-justifier:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "killbills:build:development"
+          "buildTarget": "text-justifier:build:development"
         },
         "production": {
-          "buildTarget": "killbills:build:production"
+          "buildTarget": "text-justifier:build:production"
         }
       }
     },
     "docker-build": {
       "dependsOn": ["build"],
-      "command": "docker build -f Dockerfile . -t killbills"
+      "command": "docker build -f Dockerfile . -t text-justifier"
     }
   },
   "tags": []
